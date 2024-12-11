@@ -67,12 +67,12 @@ const Services = () => {
 
 export default Services
 const Container = styled.div`
-    background-image:url('/vector.png');
+    background-image:url('/Vector.png');
     background-repeat:  repeat;
     background-size: 30px 30px;
 
   .text-div{
-    margin-top: 70px;
+    padding-top: 70px;
     text-align: center;
     h1{
       font-size: 3em;
@@ -159,11 +159,12 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     gap: 60px;
-    margin-bottom: 100px;
+    
     background-color: #ffb6c161;
     padding: 20px;
     width: 1100px;
     margin: auto;
+    margin-bottom: 100px;
 
     .text{
       align-content: center;

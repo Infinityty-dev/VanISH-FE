@@ -47,7 +47,7 @@ export default Footer
 const Container = styled.div`
 background-color: black;
 color: white;
-/* height: 250px; */
+
 
 p{
     font-size: 13px;
@@ -59,7 +59,7 @@ p{
     justify-content: space-evenly;
     gap: 110px;
     padding: 60px 30px 0px 30px;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     margin-bottom: 30px;
     flex-wrap: wrap;
      

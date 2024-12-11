@@ -31,7 +31,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow:.5px 0.1px 15px;
+  box-shadow:.5px 0.1px 8px;
   position: sticky;
   top: 0px;
   z-index: 3;
@@ -45,12 +45,23 @@ const Container = styled.div`
   }
 
   .nav{
+    a{
+      text-decoration: none;
+    }
     ul{
         list-style: none;
         display: flex;
         gap: 40px;
+        
         li{
         cursor: pointer;
+       
+        }
+        li:hover{
+          color: #126A10;
+          text-decoration: underline;
+          font-size: 18px;
+          transition: font-size 0ms.7 ease;
         }
     }
   }

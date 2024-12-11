@@ -1,8 +1,8 @@
-
+const dotenv = require('dotenv').config()
 //creating the database
 const mongoose = require('mongoose');
 
-const db_url = 'mongodb+srv://vanish:vanish@vanish-backend.c9ljd.mongodb.net/?retryWrites=true&w=majority&appName=vanish-backend';
+const db_url = process.env.MONGO_URI;
 
 
 const database = (url)=>{

@@ -5,7 +5,7 @@ const signUpSchema = new mongoose.Schema({
     email:{
         type:String,
         required:true,
-        unique:true
+        // unique:true
     },
     password:{
         type:String,
@@ -14,6 +14,9 @@ const signUpSchema = new mongoose.Schema({
     phone:{
         type:Number,
     }
+},
+{
+    timestamps:true
 })
 
 const signUp = mongoose.model('signUp',signUpSchema);

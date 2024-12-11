@@ -2,6 +2,9 @@ import React from 'react'
 import ServiceCard from '../Component/ServicesCard.jsx'
 import styled from 'styled-components'
 import Button from '/src/Component/Button.jsx'
+import { IoTimeSharp } from "react-icons/io5";
+import { GiPadlock } from "react-icons/gi";
+import { PiFolderOpen } from "react-icons/pi";
 
 const Services = () => {
   return (
@@ -15,9 +18,9 @@ const Services = () => {
         </p>
        </div>
         <div className='serviceCards'>
-            <ServiceCard/>
-            <ServiceCard/>
-            <ServiceCard/>
+            <ServiceCard img ={<IoTimeSharp />} title='Track Every Van In Real Time' text1='Stay updated on your van exact' text2='location with instant tracking' text3='notification'/>
+            <ServiceCard img ={<GiPadlock />} title='Items Security' text1='item security is our top priority' text2='' text3=''/>
+            <ServiceCard img ={<PiFolderOpen />} title='Clear & No Hidden Fees' text1='Pay exactly what is stated' text2='without unexpected or additional' text3='charges.'/>
         </div>
 
         <div className='fleet-safety-outer-box'>
@@ -69,10 +72,10 @@ const Container = styled.div`
     background-size: 30px 30px;
 
   .text-div{
-    margin-top: 100px;
+    margin-top: 70px;
     text-align: center;
     h1{
-      font-size: 5em;
+      font-size: 3em;
       color: black;
       margin-bottom: 30px;
     }
@@ -81,16 +84,16 @@ const Container = styled.div`
       font-weight: bold;
     }
     p{
-      font-size: 22px;
+      font-size: 18px;
     }
   }
   .serviceCards{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
     margin-bottom: 200px;
-    gap: 0px;
+    gap: 30px;
   }
   .fleet-safety-outer-box{
     width: 1100px;
@@ -172,7 +175,8 @@ const Container = styled.div`
         margin-bottom: 40px;
       }
       p{
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: 500;
         margin-bottom: 40px;
         line-height: 1.5;
       }

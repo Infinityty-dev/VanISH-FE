@@ -10,9 +10,9 @@ const Header = () => {
         </div>
         <div class='nav'>
             <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>About Us</li>
+                <a href="/"><li>Home</li></a>
+                <a href="/services"><li>Services</li></a>
+                <a href="/about-us"><li>About Us</li></a>
             </ul>
         </div>
         <div class='btn'>
@@ -32,6 +32,10 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   box-shadow:.5px 0.1px 15px;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  background-color: white;
 
 
   .logo{
@@ -46,7 +50,7 @@ const Container = styled.div`
         display: flex;
         gap: 40px;
         li{
-        
+        cursor: pointer;
         }
     }
   }

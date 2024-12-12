@@ -8,7 +8,7 @@ import { PiFolderOpen } from "react-icons/pi";
 
 const Services = () => {
   return (
-    <Container>
+    <Container id='services'>
        <div className='text-div'>
        <h1>
             Three main <span>services</span>

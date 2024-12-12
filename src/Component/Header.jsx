@@ -11,7 +11,7 @@ const Header = () => {
         <div class='nav'>
             <ul>
                 <a href="/"><li>Home</li></a>
-                <a href="/services"><li>Services</li></a>
+                <a href="#services"><li>Services</li></a>
                 <a href="/about-us"><li>About Us</li></a>
             </ul>
         </div>
@@ -61,7 +61,7 @@ const Container = styled.div`
           color: #126A10;
           text-decoration: underline;
           font-size: 18px;
-          transition: font-size 0ms.7 ease;
+          transition: font-size 1.5s ease;
         }
     }
   }

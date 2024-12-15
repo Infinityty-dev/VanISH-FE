@@ -127,9 +127,7 @@ function Home() {
 
 export default Home
 const Container = styled.div`
-html{
-    scroll-behavior: smooth;
-}
+/* padding-bottom:100px; */
 
 .hero{
     /* border: 1px solid red; */
@@ -223,6 +221,9 @@ section{
     background-image:url('/Vector.png');
     background-repeat:  repeat;
     background-size: 30px 30px;
+    z-index:-1;
+    padding-bottom:100px;
+    
 
   .text-div{
     padding-top: 70px;
@@ -312,12 +313,13 @@ section{
     display: flex;
     justify-content: center;
     gap: 60px;
-    
-    background-color: #ffb6c161;
+    z-index:3;
+    border-radius:10px;
+    background-color: pink;
     padding: 20px;
     width: 1100px;
     margin: auto;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 
     .text{
       align-content: center;
@@ -338,4 +340,64 @@ section{
   }
 }
 
+
+ /* Media query for max-width: 800px */
+ @media (max-width: 800px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      padding: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+    }
+
+    .hero-form {
+      max-width: 400px;
+      height: auto;
+      padding: 30px;
+    }
+
+    section .fleet-safety-outer-box {
+      width: 90%;
+      height: auto;
+      padding: 50px 20px;
+    }
+
+    .revolutionise {
+      flex-direction: column;
+      text-align: center;
+      width: 90%;
+    }
+  }
+
+  /* Media query for max-width: 320px */
+  @media (max-width: 320px) {
+    .hero-text h1 {
+      font-size: 30px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+    }
+
+    .hero-form {
+      padding: 20px;
+      max-width: 300px;
+    }
+
+    section .text-div h1 {
+      font-size: 2em;
+    }
+
+    .ratings h1 {
+      font-size: 20px;
+    }
+
+    .revolutionise {
+      padding: 15px;
+    }
+  }
 `

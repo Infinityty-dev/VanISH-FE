@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { GiHamburgerMenu } from "react-icons/gi"
 import Button from '/src/Component/Button.jsx'
 import React from 'react'
 
@@ -9,11 +10,17 @@ const Header = () => {
             <img src="/logo.png" alt="vanish logo" />
         </div>
         <div class='nav'>
-            <ul>
+            <ul id="nav">
                 <a href="/"><li>Home</li></a>
                 <a href="/services"><li>Services</li></a>
                 <a href="/about-us"><li>About Us</li></a>
             </ul>
+            <ul id="nav2">
+                <a href="/"><li>Home</li></a>
+                <a href="/services"><li>Services</li></a>
+                <a href="/about-us"><li>About Us</li></a>
+            </ul>
+            <GiHamburgerMenu className="hamburger" onClick={() => {document.getElementById('#nav2').classList.toggle('show')}} />
         </div>
         <div class='btn'>
         <Button name='Sign Up' bgcolor='#126A10' color='white'/>
@@ -37,6 +44,9 @@ const Container = styled.div`
   z-index: 3;
   background-color: white;
 
+  .hamburger{
+    display: none;
+  }
 
   .logo{
     img{
@@ -64,6 +74,9 @@ const Container = styled.div`
           transition: font-size 1.5s ease;
         }
     }
+    #nav2{
+      display:none; 
+    } 
   }
   .btn{
     display:flex;
@@ -88,5 +101,27 @@ const Container = styled.div`
     cursor: pointer;
   }
 
+  }
+
+  @media (max-width: 420px) {
+
+
+    .logo{
+    img{
+      width:85px;
+    }
+  }
+    #nav{
+      display:none; 
+    } 
+    /* #nav2 ul li{
+      display:none; 
+    }  */
+    .btn{
+      display:none;
+    }
+    .hamburger{
+    display: flex;
+  }
   }
   `

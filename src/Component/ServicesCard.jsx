@@ -27,6 +27,7 @@ const Container = styled.div`
   height: 250px;
   border-radius: 25px;
   padding: 30px;
+  background-color:white;
 
   h2{
     margin-bottom: 15px;

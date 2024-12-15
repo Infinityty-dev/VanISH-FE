@@ -32,8 +32,8 @@ const Footer = () => {
         <hr />
         <div className='footer-socials'>
             <div>
-                <img src="/facebook.png" alt="" />
-                <img className='youtube' src="/youtube.png" alt="" />
+                <span><img src="/facebook.png" alt="" />
+                <img className='youtube' src="/youtube.png" alt="" /></span>
             </div>
             <div><h3>INFINITY DEVS 2024 @ All RIghts Reserved</h3></div>
         </div>
@@ -57,15 +57,14 @@ p{
 .footer-text{
     display: flex;
     justify-content: space-evenly;
-    gap: 110px;
+    gap: 0px;
     padding: 60px 30px 0px 30px;
-    /* margin-top: 80px; */
     margin-bottom: 30px;
     flex-wrap: wrap;
      
 }
 hr{
-        width:1200px;
+        width:80%px;
         margin:auto;
     }
 
@@ -74,15 +73,40 @@ hr{
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    /* padding: 20px 30px; */
     margin-top: 10px;
-    width:1200px;
+    width:80%;
     margin: auto;
 
     .youtube{
         width: 40px;
     }
 }
+@media (max-width: 420px) {
+    .footer-text{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        font-size: 30px;
+    }
+    .footer-socials{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    width:90%;
+    margin: auto;
+    font-size: 12px;
+    
+    img{
+        width: 20px;
+    }
+    .youtube{
+        width: 20px;
+    }
+}
 
+}
     
 `

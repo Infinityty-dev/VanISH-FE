@@ -23,7 +23,7 @@ const Header = () => {
             <GiHamburgerMenu className="hamburger" onClick={() => {document.getElementById('#nav2').classList.toggle('show')}} />
         </div>
         <div class='btn'>
-        <Button name='Sign Up' bgcolor='#126A10' color='white'/>
+        <a href="/SignUp"><Button name='Sign Up' bgcolor='#126A10' color='white'/></a>
         <Button name='Log In' bgcolor='white' color='#126A10'/>
             
             

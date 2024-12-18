@@ -87,7 +87,7 @@ function Home() {
                 
                     
                     <div className='service-button'>
-                    <Button className='sbutton'name='Learn More' bgcolor='rgb(18, 106, 16)' color='white'/>
+                    <Button className='sbutton'name='Learn More' bgcolor='rgb(18, 106, 16)' color='white' width= {140} height={40}/>
                     </div>
                 </div>
                 
@@ -105,7 +105,7 @@ function Home() {
                     <h2>Ready to Revolutionize Your <br /> Logistic Operations ?</h2>
                     <p>Join other countless other businesses that have streamlined their <br /> logistics with our cutting-edge solutions</p>
                     <div className='revolutionise-button'>
-                        <Button name='Sign Up' bgcolor='rgb(18, 106, 16)' color='white'/>
+                        <Button name='Sign Up' bgcolor='rgb(18, 106, 16)' color='white' width= {140} height={40}/>
                     </div>
                 </div>
                 <div className='image'>
@@ -157,8 +157,8 @@ background:linear-gradient(to left,rgba(255,255,255,0)0%,rgba(255,255,255,50)100
     background-repeat:  repeat;
     background-size: 30px 30px;
     max-width:550px;
-    height:75vh;
-    padding:50px;
+    height:fit-content;
+    padding:40px;
     border-bottom-right-radius:30px;
     border-top-right-radius:30px;
 
@@ -342,7 +342,7 @@ section{
 
 
  /* Media query for max-width: 800px */
- @media (max-width: 800px) {
+ @media (max-width: 900px) {
     .hero {
       flex-direction: column;
       text-align: center;
@@ -374,7 +374,7 @@ section{
   }
 
   /* Media query for max-width: 320px */
-  @media (max-width: 420px) {
+  @media (max-width: 429px) {
     .hero{
       background:linear-gradient(rgba(0,0,0,0)0%,rgba(255,255,255,0)),
       url('') center/cover no-repeat;

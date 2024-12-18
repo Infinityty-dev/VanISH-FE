@@ -23,8 +23,8 @@ const Header = () => {
             <GiHamburgerMenu className="hamburger" onClick={() => {document.getElementById('#nav2').classList.toggle('show')}} />
         </div>
         <div class='btn'>
-        <a href="/SignUp"><Button name='Sign Up' bgcolor='#126A10' color='white'/></a>
-        <Button name='Log In' bgcolor='white' color='#126A10'/>
+        <a href="/SignUp"><Button name='Sign Up' bgcolor='#126A10' color='white ' width= {140} height={40}/></a>
+        <Button name='Log In' bgcolor='white' color='#126A10' width= {140} height={40}/>
             
             
         </div>
@@ -103,7 +103,7 @@ const Container = styled.div`
 
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 429px) {
 
 
     .logo{

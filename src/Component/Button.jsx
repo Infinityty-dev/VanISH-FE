@@ -6,8 +6,8 @@ const Button = (props) => {
     <div >
         
         <button style={{
-        width: '140px',
-        height: '40px',
+        width: props.width,
+        height: props.height,
         borderRadius: '15px',
         backgroundColor: props.bgcolor,
         color: props.color,

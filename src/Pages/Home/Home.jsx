@@ -50,7 +50,7 @@ function Home() {
                                 <option value="option3">Option 3</option>
                             </select>
 
-                            <div className='form-button'><Button name='Get A Quote' bgcolor='rgb(18, 106, 16)' color='white'/></div>
+                            <div className='form-button'><Button name='Get A Quote' width= {140} height={40}bgcolor='rgb(18, 106, 16)' color='white'/></div>
                     </form>
 
                     <img className='heroImage' src="/hero-image.png" alt="" />
@@ -87,7 +87,7 @@ function Home() {
                 
                     
                     <div className='service-button'>
-                    <Button name='Learn More' bgcolor='rgb(18, 106, 16)' color='white'/>
+                    <Button className='sbutton'name='Learn More' bgcolor='rgb(18, 106, 16)' color='white'/>
                     </div>
                 </div>
                 
@@ -105,7 +105,7 @@ function Home() {
                     <h2>Ready to Revolutionize Your <br /> Logistic Operations ?</h2>
                     <p>Join other countless other businesses that have streamlined their <br /> logistics with our cutting-edge solutions</p>
                     <div className='revolutionise-button'>
-                    <Button name='Sign Up' bgcolor='rgb(18, 106, 16)' color='white'/>
+                        <Button name='Sign Up' bgcolor='rgb(18, 106, 16)' color='white'/>
                     </div>
                 </div>
                 <div className='image'>
@@ -252,7 +252,6 @@ section{
   }
   .fleet-safety-outer-box{
     width: 90%;
-    /* height: 500px; */
     margin-bottom: 150px;
     margin:auto;
     border-radius: 20px;
@@ -274,6 +273,7 @@ section{
       top: -100px;
       right: -110px;
       width: 70%;
+    
     }
 
     h3{
@@ -406,6 +406,7 @@ section{
     .serviceCards{
     display: flex;
     flex-direction: column;
+    /* flex-wrap: wrap; */
     justify-content: space-evenly;
     margin-left: 19px;
     margin-top: 50px;
@@ -431,15 +432,31 @@ section{
     .fleetCar{
       position: absolute;
       top: 300px;
-      right: -110px;
-      width: 250px;
+      right: 110px;
+      width: 350px;
     }
 
     .fleet-safety-inner-box h3{
-      padding-top: 140px;
+      padding-top: 100px;
       margin-bottom: 10px;
+      font-size: 16px;
     }
-    
+
+    .fleet-safety-inner-box p{
+      font-size: 13px;
+      padding-bottom: 30px;
+      /* position: relative; */
+    }
+    .doubleQuote{
+      width: 40px;
+    }
+
+    .sbutton{
+      display: inline-block;
+      position: absolute; 
+      bottom: 130px;
+      right: 10px;
+      }
   
 
     .ratings{

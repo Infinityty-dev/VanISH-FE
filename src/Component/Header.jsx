@@ -23,8 +23,8 @@ const Header = () => {
             <GiHamburgerMenu className="hamburger" onClick={() => {document.getElementById('#nav2').classList.toggle('show')}} />
         </div>
         <div class='btn'>
-        <a href="/SignUp"><Button name='Sign Up' bgcolor='#126A10' color='white ' width= {140} height={40}/></a>
-        <Button name='Log In' bgcolor='white' color='#126A10' width= {140} height={40}/>
+        <a href="/SignUp"><Button name='Sign Up' bgcolor='#126A10' color='white ' width= {160} height={48}/></a>
+        <Button name='Log In' bgcolor='white' color='#126A10' width= {160} height={48}/>
             
             
         </div>
@@ -38,7 +38,8 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow:.5px 0.1px 8px;
+  box-shadow:.5px 0.1px 15px lightgrey;
+  box-shadow: bl;
   position: sticky;
   top: 0px;
   z-index: 3;
@@ -57,6 +58,7 @@ const Container = styled.div`
   .nav{
     a{
       text-decoration: none;
+      color: black;
     }
     ul{
         list-style: none;
@@ -69,7 +71,7 @@ const Container = styled.div`
         }
         li:hover{
           color: #126A10;
-          text-decoration: underline;
+          /* text-decoration: underline; */
           font-size: 18px;
           transition: font-size 1.5s ease;
         }

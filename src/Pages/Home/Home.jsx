@@ -4,6 +4,9 @@ import ServiceCard from '/src/Component/ServicesCard.jsx'
 import { IoTimeSharp } from "react-icons/io5";
 import { GiPadlock } from "react-icons/gi";
 import { PiFolderOpen } from "react-icons/pi";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoIosSpeedometer } from "react-icons/io";
+import { FaShippingFast } from "react-icons/fa";
 
 
 function Home() {
@@ -25,32 +28,51 @@ function Home() {
                     <hr/>
                     <form >
                             <label>Pick Up Location</label> <br/>
-                            <input className='input1' type='text' placeholder='pick up location'/>
-                            <img className='img1' src="/location.png" alt="vanish logo"  /><br/>
+                            <div className='input1'>
+                              <div>
+                              <FaLocationDot size={25} /> 
+                              </div>
+                              <input className='input' type='text' placeholder='pick up location'/>
+                            </div>
+                            <br/>
                             <br/>
 
+
                             <label>Drop Off Location</label> <br/>
-                            <img className='img2' src="/location.png" alt="vanish logo" /><input className='input2'  type='text' placeholder='drop off location'/><br/>
+                            <div className='input1 input2'>
+                              <div>
+                              <FaLocationDot size={25} /> 
+                              </div>
+                              <input className='input' type='text' placeholder='drop off location'/>
+                            </div>
+                          
                             <div className='form-cards'>
                                 <div>
-                                <img src="/location.png" alt="vanish logo" />
-                                    <p>Schedule</p>
+                                <IoIosSpeedometer size={25} color='#126A10 '/>
+                                    <p color='black'>Schedule</p>
                                 </div>
                                 <div>
-                                <img src="/speedTruck.png" alt="vanish logo" />
+                                <FaShippingFast size={25} color='#126A10 '/>
                                     <p>Instant</p>
                                 </div>
                                 
                             </div>
 
                             <label for='services'>Services</label> <br/>
+                            <div className='input1'>
                             <select name="services" id="services">
                                 <option value="option1">Option 1</option>
                                 <option value="option2">Option 2</option>
                                 <option value="option3">Option 3</option>
                             </select>
+                            </div>
+                            {/* <select name="services" id="services">
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                            </select> */}
 
-                            <div className='form-button'><Button name='Get A Quote' width= {140} height={40}bgcolor='rgb(18, 106, 16)' color='white'/></div>
+                            <div className='form-button'><Button name='Get A Quote' width= {160} height={48} bgcolor='rgb(18, 106, 16)' color='white'/></div>
                     </form>
 
                     <img className='heroImage' src="/hero-image.png" alt="" />
@@ -71,9 +93,9 @@ function Home() {
                 </p>
             </div>
                 <div className='serviceCards'>
-                    <ServiceCard img ={<IoTimeSharp />} title='Track Every Van In Real Time' text1='Stay updated on your van exact' text2='location with instant tracking' text3='notification'/>
-                    <ServiceCard img ={<GiPadlock />} title='Items Security' text1='item security is our top priority' text2='' text3=''/>
-                    <ServiceCard img ={<PiFolderOpen />} title='Clear & No Hidden Fees' text1='Pay exactly what is stated' text2='without unexpected or additional' text3='charges.'/>
+                    <ServiceCard img ={<IoTimeSharp  size={30}/>} title='Track Every Van In Real Time' text1='Stay updated on your van exact' text2='location with instant tracking' text3='notification'/>
+                    <ServiceCard img ={<GiPadlock   size={30}/>} title='Items Security' text1='item security is our top priority' text2='' text3=''/>
+                    <ServiceCard img ={<PiFolderOpen  size={30}/>} title='Clear & No Hidden Fees' text1='Pay exactly what is stated' text2='without unexpected or additional' text3='charges.'/>
                 </div>
 
                 <div className='fleet-safety-outer-box'>
@@ -87,7 +109,7 @@ function Home() {
                 
                     
                     <div className='service-button'>
-                    <Button className='sbutton'name='Learn More' bgcolor='rgb(18, 106, 16)' color='white' width= {140} height={40}/>
+                    <Button className='sbutton'name='Learn More' bgcolor='rgb(18, 106, 16)' color='white' width= {160} height={48}/>
                     </div>
                 </div>
                 
@@ -105,7 +127,7 @@ function Home() {
                     <h2>Ready to Revolutionize Your <br /> Logistic Operations ?</h2>
                     <p>Join other countless other businesses that have streamlined their <br /> logistics with our cutting-edge solutions</p>
                     <div className='revolutionise-button'>
-                        <Button name='Sign Up' bgcolor='rgb(18, 106, 16)' color='white' width= {140} height={40}/>
+                        <Button name='Sign Up' bgcolor='rgb(18, 106, 16)' color='white' width= {160} height={48}/>
                     </div>
                 </div>
                 <div className='image'>
@@ -149,7 +171,21 @@ background:linear-gradient(to left,rgba(255,255,255,0)0%,rgba(255,255,255,50)100
         margin-bottom:20px;
     }
 }
-    
+    .heroFormInput{
+       display: flex;
+       align-items:center;
+       background-color: yellow;
+       input{
+        width:100%;
+        padding:5px;
+        /* z-index: 2; */
+       }
+       img{
+        width:20px;
+        /* height:30px; */
+        margin-left:10px;
+       }
+    }
 .hero-form{
     border:solid 1px black;
     background-color:white;
@@ -158,26 +194,47 @@ background:linear-gradient(to left,rgba(255,255,255,0)0%,rgba(255,255,255,50)100
     background-size: 30px 30px;
     max-width:550px;
     height:fit-content;
-    padding:40px;
+    padding:15px 75px;
     border-bottom-right-radius:30px;
     border-top-right-radius:30px;
+    h2{
+      font-size: 20px;
+    }
+    p{
+      font-size: 13px;
+    }
+    label{
+      color: black;
+    }
 
     h2,p,hr,label{
         margin-bottom:10px;
     }
     select{
         width:100%;
-        margin-bottom: 20px;
-    }
-    input{
-        text-align: right;
-        height:26px;
-        width: 100%;
         margin-bottom: 10px;
-        /* border:none; */
+    }
+   
+    .input1{
+    display: flex;
+    border: #126A10 1px solid;
+    border-radius:5px;
+    padding: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+
+    input{
+      width: 100%;
+      height: 31px;
+      outline: none;
+      border: none;
+      padding-left: 10px;
+    }
+   
     }
     .form-input{
-        border:1px solid black;
+        /* border:1px solid black; */
         /* height:30px; */
         background-color:white;
         align-content:center;
@@ -193,15 +250,25 @@ background:linear-gradient(to left,rgba(255,255,255,0)0%,rgba(255,255,255,50)100
         left: 10px;
 
     }
+    select{
+      width: 100%;
+      height: 20px;
+      outline: none;
+      border: none;
+      /* padding-left: 10px; */
+    }
    
 
     .form-cards{
         display:flex;
         justify-content:space-between;
         align-items:center;
+        p{
+          color: black;
+        }
         
         div{
-            background-color: #8080808b;
+            background-color: #e7f0e7;
             text-align:center;
             width:70px;
             margin-bottom:10px;
@@ -315,7 +382,7 @@ section{
     gap: 60px;
     z-index:3;
     border-radius:10px;
-    background-color: pink;
+    background-color: #fbf9e9;
     padding: 20px;
     width: 100%;
     margin: auto;

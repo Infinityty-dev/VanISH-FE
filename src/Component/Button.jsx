@@ -11,9 +11,10 @@ const Button = (props) => {
         borderRadius: '15px',
         backgroundColor: props.bgcolor,
         color: props.color,
-        border: '1px solid #126A10',
+        border: '2px solid #126A10',
         cursor: 'pointer',
-        marginRight: '20px'
+        marginRight: '20px',
+        boxShadow:'1px 1px 12px lightgrey '
     }}>{props.name}</button>
     </div>
   )

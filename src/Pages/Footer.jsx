@@ -35,7 +35,7 @@ const Footer = () => {
                 <span><img src="/facebook.png" alt="" />
                 <img className='youtube' src="/youtube.png" alt="" /></span>
             </div>
-            <div><h3>INFINITY DEVS 2024 @ All RIghts Reserved</h3></div>
+            <div><p>INFINITY DEVS 2024 @ All RIghts Reserved</p></div>
         </div>
 
     </Container>
@@ -50,7 +50,7 @@ color: white;
 
 
 p{
-    font-size: 13px;
+    font-size: 15px;
     margin:10px 0px 10px 0px;
 }
 
@@ -76,6 +76,9 @@ hr{
     margin-top: 10px;
     width:80%;
     margin: auto;
+    p{
+        font-size: 13px;
+    }
 
     .youtube{
         width: 40px;

@@ -1,3 +1,4 @@
+import SignUpPage from "../../Component/SignUpPage"
 import Terms from "../../Component/Terms"
 
 
@@ -10,6 +11,7 @@ const SignUp = () =>{
             
 
             <Terms/>
+            <SignUpPage/>
 
         </div>
     )

@@ -10,6 +10,12 @@ import { FaShippingFast } from "react-icons/fa";
 
 
 function Home() {
+const input1 = document.getElementById('input1')
+const input2 = document.getElementById('input2')
+const output = document.getElementById('output')
+
+
+
     return(
        <Container>
         <div class='hero'>
@@ -28,11 +34,12 @@ function Home() {
                     <hr/>
                     <form >
                             <label>Pick Up Location</label> <br/>
-                            <div className='input1'>
+                            <div className='input1 dropdown-container'>
                               <div>
                               <FaLocationDot size={25} /> 
                               </div>
-                              <input className='input' type='text' placeholder='pick up location'/>
+                              <input id='input1'className='input' type='text' placeholder='pick up location'/>
+                              
                             </div>
                             <br/>
                             <br/>
@@ -43,7 +50,8 @@ function Home() {
                               <div>
                               <FaLocationDot size={25} /> 
                               </div>
-                              <input className='input' type='text' placeholder='drop off location'/>
+                              <input id='input2' className='input' type='text' placeholder='drop off location'/>
+                                   
                             </div>
                           
                             <div className='form-cards'>
@@ -66,11 +74,7 @@ function Home() {
                                 <option value="option3">Option 3</option>
                             </select>
                             </div>
-                            {/* <select name="services" id="services">
-                                <option value="option1">Option 1</option>
-                                <option value="option2">Option 2</option>
-                                <option value="option3">Option 3</option>
-                            </select> */}
+                           <div id='output'></div>
 
                             <div className='form-button'><Button name='Get A Quote' width= {160} height={48} bgcolor='rgb(18, 106, 16)' color='white'/></div>
                     </form>
@@ -150,6 +154,44 @@ function Home() {
 export default Home
 const Container = styled.div`
 
+/* drop down */
+.dropdown-container {
+    position: relative;
+    width: 300px;
+  }
+  
+  #dropdown-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none; /* Hidden by default */
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+
 .hero{
 display: flex;
 justify-content: space-around;
@@ -222,10 +264,12 @@ background:linear-gradient(to left,rgba(255,255,255,0)0%,rgba(255,255,255,50)100
     padding: 3px;
     margin-top: 5px;
     margin-bottom: 10px;
+    background-color: white;
+    width: 100%;
 
 
     input{
-      width: 100%;
+      
       height: 31px;
       outline: none;
       border: none;

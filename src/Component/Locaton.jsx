@@ -47,6 +47,7 @@ const Service = styled.div`
    border-radius:18px;
    font-size: 13px;
    font-family: "Poppins";
+   display: none;
 
    button{
       background-color: #126A10;

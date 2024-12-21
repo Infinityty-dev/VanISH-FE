@@ -12,7 +12,7 @@ const database = (url)=>{
         console.log('The database is currently live!')
     })
     .catch((err)=>{
-            console.log('The database didnt connect,please check the connection conditions.',err)
+            console.log('The database didnt connect,please check the connection conditions.::',err)
     })
             
     }

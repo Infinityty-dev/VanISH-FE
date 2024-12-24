@@ -2,21 +2,58 @@ const mongoose = require('mongoose');
 
 const signUpSchema = new mongoose.Schema({
 
-    email:{
+    Id :{
         type:String,
         required:true,
-        // unique:true
+     },
+
+    emailorphone:{
+        type:String,
+        required:true,
     },
     password:{
         type:String,
         required:true
     },
-    phone:{
-        type:Number,
+   
+    Name :{
+        type:String,
+        required:true,
+    },
+
+    TandC :{
+        type:boolean,
+        default: false,
+        required: true,
+
+    },
+
+    ServiceOption: {
+        required: true,
+    },
+
+    VehicleChoice: {
+        required: true,
+    },
+
+    PickUpLocation: {
+        type: String,
+        required: true,
+    },
+
+    DropOffLocation: {
+        type: String,
+        required: true,
+    },
+
+    UserComlaint:{
+        type: Number,
+
+    },
+
+    CompletedDelivery:{
+        type: Number,
     }
-},
-{
-    timestamps:true
 })
 
 const signUp = mongoose.model('signUp',signUpSchema);
